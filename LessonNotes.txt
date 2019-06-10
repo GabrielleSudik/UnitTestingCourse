@@ -1,0 +1,24 @@
+This solution needed the NUnit extension added and two NUnit NuGet packages.
+
+Make sure when you create the new project it's the same kind as the project being tested.
+Here, Windows Classic Desktop -- Class Library
+
+The Tests project needs a reference to the base project.
+
+
+Naming conventions:
+	ProjectUnderTest.Tests: Business.Tests
+	ClassNameUnderTestTests: CustomerTests
+	Methods being tested: (prof and my favorite):
+		void UnitUnderTest_Scenario_ExpectedOutcome()
+		void SumTwoNumbers_3and4_Returns7()
+		(there are other ways, especially for weird methods)
+
+Test -- Windows -- Test Explorer
+Run All (or Run subset) will build the solution first.
+Rightclick -- Add to Playlist will create playlists
+	Playlist can then be set to whatever playlist you want.
+	Check out your playlists in Notepad or something.
+
+You can breakpoint and debug tests. 
+You can group them and toggle auto running of tests with menu at top of Test Explorer.
