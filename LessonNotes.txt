@@ -22,3 +22,26 @@ Rightclick -- Add to Playlist will create playlists
 
 You can breakpoint and debug tests. 
 You can group them and toggle auto running of tests with menu at top of Test Explorer.
+
+Assert.That is the heart of testing. Constraints are the heart of asserts:
+	Major: is, has, does
+	Next in importance: all, not, some (and others more rarely used)
+	Ex: Assert.That(array, Is.All.Contains('b"));
+		Assert.That(array, Has.All.GreaterThan(0));
+		Assert.That(2+2, Is.Not.EqualTo(3));
+		Assert.That(phrase, Does.Not.EndWith("!"));
+		Assert.That(strings, Has.Some.StartsWith("gab"));
+	Compound constraints:
+		Assert.That(5, Is.LessThan(1).Or.GreaterThan(10));
+		Assert.That(5, Is.LessThan(10).And.GreaterThan(1));)
+
+Arrange -- Act -- Assert pattern. See CharacterTest for a layout.
+
+Running tests from the console:
+	First, you need a stand-alone download of NUnit at www.nunit.org
+	The teacher really botched this part of the lesson.
+	So you know it's possible, but you didn't try it.
+
+Setup and Teardown: See the code for your notes.
+You can also set high level setup and teardowns, that will run one time
+before all of the other setups/tests/teardowns run.
