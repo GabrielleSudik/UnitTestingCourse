@@ -50,6 +50,7 @@
     <Compile Include="Character.cs" />
     <Compile Include="DegreeConverter.cs" />
     <Compile Include="Device.cs" />
+    <Compile Include="FizzBuzz.cs" />
     <Compile Include="Money.cs" />
     <Compile Include="QuotationProcessor\Refactored\Action.cs" />
     <Compile Include="QuotationProcessor\Refactored\FileAction.cs" />
@@ -58,6 +59,7 @@
     <Compile Include="QuotationProcessor\Refactored\QuotationService.cs" />
     <Compile Include="QuotationProcessor\Refactored\Record.cs" />
     <Compile Include="QuotationProcessor\Unrefactored.cs" />
+    <Compile Include="RomanNumeral.cs" />
     <Compile Include="SerialPortParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SetupAndTeardown\CharacterTests.cs" />

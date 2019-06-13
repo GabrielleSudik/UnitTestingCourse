@@ -25,7 +25,7 @@ namespace Business.Tests.SetupAndTeardown
         }
 
         [Test]
-        [Ignore("reason")]
+        [Ignore("Ignored for purposes of training only.")]
         public void IsDead_KillCharacter_ReturnsTrue()
         {        
             _character.Damage(500);

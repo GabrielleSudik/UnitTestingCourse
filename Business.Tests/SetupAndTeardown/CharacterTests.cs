@@ -52,8 +52,14 @@ namespace Business.Tests.SetupAndTeardown
             Assert.IsFalse(_character.IsDead);
         }
 
+        //parameterized test:
+        //first two lines send different variables; the test runs once for each TestCase
         [TestCase(100, 45)]
         [TestCase(80, 65)]
+        //TestCaseSource allows for re-use of a test case
+        //note this is used instead of teeing up multiple TestCases
+        //(you left in both for easier reading)
+        //this way can handle more complex arrangements than TestCase
         [TestCaseSource(typeof(DamageSource))]
         [Category("Slow")]
         public void Health_Damage_ReturnsCorrectValue(int damage, int expectedHealth)
@@ -62,6 +68,7 @@ namespace Business.Tests.SetupAndTeardown
             Assert.That(_character.Health, Is.EqualTo(expectedHealth));
         }
 
+        //this class created for the TestCaseSource
         public class DamageSource : IEnumerable
         {
             public IEnumerator GetEnumerator()

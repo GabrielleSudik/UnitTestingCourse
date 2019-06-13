@@ -5,7 +5,6 @@ Here, Windows Classic Desktop -- Class Library
 
 The Tests project needs a reference to the base project.
 
-
 Naming conventions:
 	ProjectUnderTest.Tests: Business.Tests
 	ClassNameUnderTestTests: CustomerTests
@@ -22,6 +21,7 @@ Rightclick -- Add to Playlist will create playlists
 
 You can breakpoint and debug tests. 
 You can group them and toggle auto running of tests with menu at top of Test Explorer.
+Write tests starting with easiest ones. Like outcomes where you expect null/zero, or exceptions.
 
 Assert.That is the heart of testing. Constraints are the heart of asserts:
 	Major: is, has, does
@@ -45,3 +45,20 @@ Running tests from the console:
 Setup and Teardown: See the code for your notes.
 You can also set high level setup and teardowns, that will run one time
 before all of the other setups/tests/teardowns run.
+
+Parameterized tests: Allow different variables to be run by the same test
+	See CharacterTests Health_Damage_ReturnsCorrectValue() for full example (SetupAndTeardown.CharaterTests)
+	Basically, use [TestCase(x, y)] where x and y (or more) are the values you want to pass to the method.
+	Or create a class that contains all the test data, and use
+	[TestCaseSource(typeof(NameOfClassWithTestInfo))]
+
+Grouping tests: When you want to group tests together for some reason
+	Just assign categories. In our code, we pretend that a couple tests are slow, so we want to run those together.
+	[Category("Slow")] (you can name the groups whatever you want)
+	Test Explorer -- Group Tests -- by Traits.
+	You can also categorize tests at the class level.
+
+Ignoring tests:
+	[Ignore("Ignored for purposes of training only.")]
+
+	
